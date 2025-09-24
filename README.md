@@ -89,6 +89,19 @@ data/raw/transfermarkt/...
 
 ---
 
+### **Data Assessment**
+
+### Volume and Coverage
+Our merged dataset contains ~886 labeled player transfers with both FBref performance metrics and Transfermarkt transfer histories. The data spans multiple European leagues and captures both pre- and post-transfer performance within a one-year window. This provides enough coverage to train baseline models and evaluate trends, though the sample size is modest compared to the global transfer market.
+
+### Granularity
+The unit of analysis is the individual player transfer. Each record links a player’s performance (from FBref) to their corresponding transfer event (from Transfermarkt), with features aggregated at the per-player level (e.g., mean percentile scores, attribute vectors) and outcomes defined as performance decline flags. The granularity is appropriate and consistent with the research question.
+
+### Bias and Representativeness
+The dataset focuses on transfers out of Europe’s top-5 leagues into other European domestic leagues, leaving out moves to non-European destinations (e.g., MLS, Saudi Pro League, Chinese Super League). As such, it may underrepresent the financial incentives driving high-profile transfers outside Europe. Additionally, performance measures rely on publicly available FBref statistics, which may not fully capture qualitative aspects of player contributions. Nonetheless, the dataset is reasonably balanced (586 no-decline vs. 300 decline cases) and provides a fair basis for modeling without extreme class imbalance.
+
+
+
 ## 🧹 Data Preprocessing
 
 - Removes duplicates and obvious errors.  
