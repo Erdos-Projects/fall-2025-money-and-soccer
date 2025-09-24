@@ -5,6 +5,35 @@ We use **FBref** (performance metrics) and **Transfermarkt** (transfer history) 
 
 ---
 
+## Problem Definition
+
+**Research Question**  
+Do players who leave Europe’s top-5 leagues (England, Spain, Italy, France, Germany) for other domestic leagues experience a measurable decline in on-field performance (goals + assists per 90 minutes) compared to peers who remain in the top leagues?
+
+**Decision or Action Informed**  
+This analysis informs scouts, analysts, and clubs about the trade-off between short-term financial gain and long-term competitive performance. It helps identify whether moving to a less competitive league increases the risk of player decline.
+
+**Stakeholders**  
+- **Football clubs & scouts:** care about predicting future performance when signing or selling players.  
+- **Players & agents:** care about understanding the career risks of moving away from top-5 leagues.  
+- **Fans & analysts:** interested in whether money-driven transfers affect competitiveness.  
+
+**Unit of Analysis**  
+The unit of analysis is a **player transfer event** — each row corresponds to one player’s move from a top-5 league to another domestic league, with performance tracked before and after the transfer.
+
+**Scope and Boundaries**  
+- **Time horizon:** one season (≈365 days) before and after the transfer.  
+- **Geographic region:** Europe’s top-5 leagues as the source; all other European domestic leagues as destinations (“emerging Europe”).  
+- **Population:** outfield players with sufficient minutes before and after the transfer.  
+- **Features included:** FBref performance attributes, GA90 (goals + assists per 90), Transfermarkt market value, position, and transfer metadata.  
+- **Features excluded:** subjective factors like media narratives, injuries without recorded minutes, or contract details not in the datasets.  
+
+**Anti-Goals**  
+- We do **not** predict a player’s financial success, wage outcomes, or sponsorship opportunities.  
+- We do **not** claim causality between transfer destination and decline (only correlation based on observed performance).  
+- We do **not** analyze purely non-European transfers (e.g., to MLS, Saudi Pro League, China).  
+
+
 ## 📂 Project Structure
 
 ```
