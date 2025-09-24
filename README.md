@@ -100,7 +100,17 @@ The unit of analysis is the individual player transfer. Each record links a play
 ### Bias and Representativeness
 The dataset focuses on transfers out of Europe’s top-5 leagues into other European domestic leagues, leaving out moves to non-European destinations (e.g., MLS, Saudi Pro League, Chinese Super League). As such, it may underrepresent the financial incentives driving high-profile transfers outside Europe. Additionally, performance measures rely on publicly available FBref statistics, which may not fully capture qualitative aspects of player contributions. Nonetheless, the dataset is reasonably balanced (586 no-decline vs. 300 decline cases) and provides a fair basis for modeling without extreme class imbalance.
 
+### **Assessing Learnability**
 
+- Signal vs. noise: The FBref features (performance metrics) plausibly explain performance change, while Transfermarkt captures transfer context — both relevant to the target.
+
+- Data sufficiency: ~886 examples with a balanced decline vs. no-decline split (≈2:1) — enough for baseline modeling.
+
+- Time series cycles: We focus on pre/post one-year windows, not long seasonal trends; cycles beyond one year are out of scope.
+
+- Feature-target alignment: All features are available before transfer, avoiding leakage from post-transfer performance.
+
+- Explanatory variables: Position, league tier, and performance metrics are plausible predictors of decline.
 
 ## 🧹 Data Preprocessing
 
