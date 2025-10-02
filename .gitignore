@@ -1,0 +1,4 @@
+/data/raw/
+.vscode/
+.venv/
+src\features\__pycache__

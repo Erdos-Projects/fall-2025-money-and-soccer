@@ -1,0 +1,51 @@
+feature,status,reason
+player_id,dropped,identifier
+transfer_date,kept,valid predictor/target
+transfer_season,dropped,temporal identifier
+from_club_id,dropped,identifier (club ID)
+to_club_id,dropped,identifier (club ID)
+from_club_name,dropped,identifier
+to_club_name,dropped,identifier
+transfer_fee,kept,valid predictor/target
+market_value_in_eur,kept,valid predictor/target
+player_name,dropped,identifier
+player_name_norm,dropped,identifier
+PreMinutes,kept,valid predictor/target
+GA_pre,kept,valid predictor/target
+PostMinutes,dropped,post-outcome leakage
+GA_post,dropped,post-outcome leakage
+GA90_pre,kept,valid predictor/target
+GA90_post,dropped,post-outcome leakage
+PerfChange,dropped,post-outcome leakage
+DeclineFlag,kept,valid predictor/target
+from_league,kept,valid predictor/target
+to_league,kept,valid predictor/target
+from_league_name,dropped,identifier
+to_league_name,dropped,identifier
+first_name,dropped,identifier
+last_name,dropped,identifier
+name,dropped,identifier
+last_season,dropped,temporal identifier (acts like ID)
+current_club_id,dropped,identifier (club ID)
+player_code,dropped,identifier
+country_of_birth,kept,valid predictor/target
+city_of_birth,dropped,dropped (low information or irrelevant)
+country_of_citizenship,kept,valid predictor/target
+date_of_birth,kept,valid predictor/target
+sub_position,kept,valid predictor/target
+position,kept,valid predictor/target
+foot,kept,valid predictor/target
+height_in_cm,kept,valid predictor/target
+contract_expiration_date,kept,valid predictor/target
+agent_name,dropped,agent info (not predictive)
+image_url,dropped,url
+url,dropped,url
+current_club_domestic_competition_id,dropped,competition code identifier
+current_club_name,dropped,identifier
+market_value_in_eur_player,kept,valid predictor/target
+highest_market_value_in_eur,kept,valid predictor/target
+Unnamed: 0,dropped,identifier
+Name,dropped,identifier
+Attribute Vector,dropped,vector embedding
+Percentiles,dropped,vector embedding
+Position,kept,valid predictor/target
