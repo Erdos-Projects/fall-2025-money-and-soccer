@@ -1,3 +1,0 @@
-Task,Model,Primary KPI,KPI Value,Secondary
-Classification,LogisticRegression(l2),F1,1.0,"ROC=1.000, PR-AUC=1.000, ACC=1.000"
-Regression,RandomForestRegressor,RMSE,0.1056,"MAE=0.017, R2=0.924"
