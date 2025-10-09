@@ -1,0 +1,8 @@
+{
+    "timestamp": "20251008_174154",
+    "splitter": "player_group_split",
+    "group_column": "from_league",
+    "n_splits": 5,
+    "samples": 4829,
+    "features": 2243
+}
