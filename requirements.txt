@@ -11,3 +11,6 @@ umap-learn==0.5.6
 numba==0.59.1
 llvmlite==0.42.0
 kaleido
+xgboost
+lightgbm
+shap
