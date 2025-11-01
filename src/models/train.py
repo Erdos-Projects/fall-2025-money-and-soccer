@@ -61,7 +61,7 @@ def train_and_evaluate(model, X, y, groups=None, cv=None, scoring=None, n_jobs=-
     if model_name is None:
         model_name = model.__class__.__name__
 
-    print(f"\n🏋️ Training model: {model_name}")
+    print(f"\n Training model: {model_name}")
 
     scores = cross_validate(
         model, X, y, groups=groups, cv=cv,
@@ -78,7 +78,7 @@ def train_and_evaluate(model, X, y, groups=None, cv=None, scoring=None, n_jobs=-
     }
 
     results_df = pd.DataFrame([results])
-    print(f"✅ Completed {model_name} — F1: {results['f1']:.4f}, AUC: {results['roc_auc']:.4f}")
+    print(f" Completed {model_name} — F1: {results['f1']:.4f}, AUC: {results['roc_auc']:.4f}")
 
     return results_df
 
@@ -109,13 +109,13 @@ def fit_full_model(model, X, y, save_path=None, model_name=None):
     if model_name is None:
         model_name = model.__class__.__name__
 
-    print(f"\n🚀 Fitting final model on full data: {model_name}")
+    print(f"\n Fitting final model on full data: {model_name}")
     model.fit(X, y)
 
     if save_path:
         os.makedirs(os.path.dirname(save_path), exist_ok=True)
         joblib.dump(model, save_path)
-        print(f"💾 Model saved to: {save_path}")
+        print(f" Model saved to: {save_path}")
 
     return model
 
@@ -126,4 +126,4 @@ def save_results(results_df, save_path="../results/model_comparison.csv"):
     """
     os.makedirs(os.path.dirname(save_path), exist_ok=True)
     results_df.to_csv(save_path, index=False)
-    print(f"📊 Results saved to {save_path}")
+    print(f" Results saved to {save_path}")

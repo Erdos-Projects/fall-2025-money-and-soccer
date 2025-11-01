@@ -113,7 +113,7 @@ def tune_model(
         DataFrame of cross-validation results sorted by the refit metric.
     """
 
-    print(f"\n🔍 Starting {search_type.capitalize()}SearchCV for {model.__class__.__name__}")
+    print(f"\n Starting {search_type.capitalize()}SearchCV for {model.__class__.__name__}")
     print(f"→ Optimizing for metric: '{refit_metric}'")
 
     # --- Select Search Strategy ---
@@ -154,7 +154,7 @@ def tune_model(
         results_df = results_df.sort_values("rank_test_" + refit_metric)
 
     best_params = search.best_params_
-    print("\n✅ Best Parameters Found:")
+    print("\n Best Parameters Found:")
     for k, v in best_params.items():
         print(f"   {k}: {v}")
 
@@ -164,13 +164,13 @@ def tune_model(
     if save_results_path:
         os.makedirs(os.path.dirname(save_results_path), exist_ok=True)
         results_df.to_csv(save_results_path, index=False)
-        print(f"\n📄 Saved CV results to: {save_results_path}")
+        print(f"\n Saved CV results to: {save_results_path}")
 
     # --- Save Best Model ---
     if save_model_path:
         os.makedirs(os.path.dirname(save_model_path), exist_ok=True)
         dump(search.best_estimator_, save_model_path)
-        print(f"💾 Saved best model to: {save_model_path}")
+        print(f" Saved best model to: {save_model_path}")
 
     return search.best_estimator_, results_df
 

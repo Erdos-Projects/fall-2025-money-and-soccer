@@ -450,7 +450,7 @@ def main():
     # --- Transfermarkt ---
     tm = TransfermarktDataBase(base_path="data/raw/transfermarkt")
     tm.load_offline()
-    targets = build_targets_fast(tm)   # ✅ fast version
+    targets = build_targets_fast(tm)   #  fast version
 
     if targets.empty:
         print("No transfer records found — merged dataset will not be created.")
@@ -462,7 +462,7 @@ def main():
     # after merging
     merged = targets.merge(fbref_feats, on="player_name_norm", how="left")
 
-    # ✅ keep only rows that actually matched FBref data
+    #  keep only rows that actually matched FBref data
     merged = merged.dropna(subset=["Name", "Attribute Vector", "Percentiles", "Position"], how="any")
 
     # ======================================
